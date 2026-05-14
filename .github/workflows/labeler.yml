@@ -1,0 +1,22 @@
+ui:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "templates/**"
+          - "static/**"
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "README.md"
+          - "docs/**"
+          - "CONTRIBUTING.md"
+
+data:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "data/**"
+
+type:testing:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "tests/**"
