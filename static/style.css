@@ -301,47 +301,7 @@ ul, ol { list-style: none; }
   max-width: 500px;
 }
 
-/* Stat strip */
-.hero-stats {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 36px;
-}
 
-@media (max-width: 600px) {
-  .hero-stats {
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: flex-start;
-  }
-  .hero-stat-divider {
-    display: none;
-  }
-  .hero-stat {
-    text-align: left;
-    min-width: 100px;
-  }
-}
-.hero-stat { text-align: center; }
-.hero-stat-num {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.03em;
-}
-.hero-stat-label {
-  font-size: 0.77rem;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 0.04em;
-}
-.hero-stat-divider {
-  width: 1px;
-  height: 36px;
-  background: rgba(255,255,255,0.15);
-}
 
 /* Hero CTA buttons */
 .hero-cta-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
@@ -1630,7 +1590,7 @@ select:focus {
   .nav-inner { padding: 0 20px; }
 
   .hero { padding: 110px 20px 72px; }
-  .hero-stats { gap: 16px; }
+
 
   .form-card { padding: 28px 22px 24px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
