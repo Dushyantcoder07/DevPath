@@ -74,6 +74,39 @@ if (isIndexPage) {
 
   // Tracks currently selected skills to prevent duplicates
   var selectedSkills = [];
+  // Clear Filters Button Functionality
+var clearFiltersBtn = document.getElementById("clear-filters-btn");
+if (clearFiltersBtn) {
+    clearFiltersBtn.addEventListener("click", function() {
+        var recommendForm = document.getElementById("recommend-form");
+        if (recommendForm) {
+            // 1. Reset standard form dropdowns and fields
+            recommendForm.reset();
+            
+            // 2. Clear out the internal JavaScript array tracker completely
+            selectedSkills = [];
+            
+            // 3. Clear the hidden inputs and visual chips using the file's own variables
+            if (skillsHidden) skillsHidden.value = "";
+            if (chipsSelectedEl) chipsSelectedEl.innerHTML = "";
+            if (skillsTextInput) {
+                skillsTextInput.value = "";
+                skillsTextInput.focus(); // Place cursor back on input
+            }
+            
+            // 4. Hide autocomplete suggestions if any are open
+            var suggestionsBox = document.getElementById("skills-suggestions");
+            if (suggestionsBox) suggestionsBox.innerHTML = "";
+
+            // 5. Reset quick-pick chip visual active states if they have any
+            if (quickPickChips) {
+                quickPickChips.forEach(function(chip) {
+                    chip.classList.remove("active", "selected");
+                });
+            }
+        }
+    });
+}
 
 
   // ----------------------------------------------------------
